@@ -11,7 +11,6 @@ public class MorseKey : MonoBehaviour {
 	private string currentSentence;
 
 	public AudioSource audioSource;
-	public Button menuItem;
 	public Text morseoutput;
 	public bool mute = false;
 
@@ -33,8 +32,6 @@ public class MorseKey : MonoBehaviour {
 			print (currentSentence);
 			currentSentence = "";
 		}
-
-
 	}
 
 	/*
@@ -45,7 +42,6 @@ public class MorseKey : MonoBehaviour {
 	 * */
 	void MorseKeyPress() {
 		keyDownTime = Time.time;
-		//menuItem.onClick.Invoke ();
 
 		if (!mute) {
 			audioSource.loop = true;
@@ -81,11 +77,13 @@ public class MorseKey : MonoBehaviour {
 	}
 
 	void UpdateDisplay() {
-		string displaySentence = "";
-		foreach (char s in currentSentence) {
-			displaySentence += s;
-			displaySentence += " ";
+		if (morseoutput != null) {
+			string displaySentence = "";
+			foreach (char s in currentSentence) {
+				displaySentence += s;
+				displaySentence += " ";
+			}
+			morseoutput.text = displaySentence.TrimEnd ();
 		}
-		morseoutput.text = displaySentence.TrimEnd ();
 	}
 }
