@@ -203,78 +203,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010648242826, guid: 566725bb941b04550bdc4f86a57620f2, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000014220104324, guid: 566725bb941b04550bdc4f86a57620f2,
         type: 2}
       propertyPath: morseoutput
       value: 
       objectReference: {fileID: 1340346495}
+    - target: {fileID: 114000014220104324, guid: 566725bb941b04550bdc4f86a57620f2,
+        type: 2}
+      propertyPath: morseTarget
+      value: 
+      objectReference: {fileID: 1563660366}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 566725bb941b04550bdc4f86a57620f2, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &850264802
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 850264805}
-  - 114: {fileID: 850264804}
-  - 114: {fileID: 850264803}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &850264803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 850264802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &850264804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 850264802}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &850264805
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 850264802}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!1 &1340346493
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +303,8 @@ GameObject:
   - 222: {fileID: 1418483988}
   - 114: {fileID: 1418483987}
   - 114: {fileID: 1418483986}
+  - 114: {fileID: 1418483989}
+  - 114: {fileID: 1418483990}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -471,6 +416,31 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1418483984}
+--- !u!114 &1418483989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418483984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b562b81df0344a0db66d783ab9ec43b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  morseSentence: 
+--- !u!114 &1418483990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418483984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
+  delegates: []
 --- !u!114 &1496107443 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000014220104324, guid: 566725bb941b04550bdc4f86a57620f2,
@@ -670,6 +640,7 @@ GameObject:
   - 222: {fileID: 1803543497}
   - 114: {fileID: 1803543496}
   - 114: {fileID: 1803543495}
+  - 114: {fileID: 1803543498}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -781,6 +752,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1803543493}
+--- !u!114 &1803543498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1803543493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b562b81df0344a0db66d783ab9ec43b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  morseSentence: 
 --- !u!1 &1879554961
 GameObject:
   m_ObjectHideFlags: 0
